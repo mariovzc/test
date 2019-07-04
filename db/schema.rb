@@ -10,14 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 3) do
+ActiveRecord::Schema.define(version: 5) do
 
   create_table "albums", force: :cascade do |t|
     t.string "name"
     t.string "image"
     t.string "spotify_url"
     t.integer "total_tracks"
-    t.integer "spotify_id"
+    t.string "spotify_id"
     t.integer "artist_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -32,6 +32,7 @@ ActiveRecord::Schema.define(version: 3) do
     t.text "genres", default: "--- []\n"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "spotify_id"
   end
 
   create_table "songs", force: :cascade do |t|
@@ -40,7 +41,7 @@ ActiveRecord::Schema.define(version: 3) do
     t.string "preview_url"
     t.integer "duration_ms"
     t.boolean "explicit"
-    t.integer "spotify_id"
+    t.string "spotify_id"
     t.integer "album_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
