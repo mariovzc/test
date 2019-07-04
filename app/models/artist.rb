@@ -10,6 +10,7 @@
 #  genres      :text             default("--- []\n")
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
+#  spotify_id  :string
 #
 
 class Artist < ApplicationRecord
