@@ -6,7 +6,7 @@ class Api::V1::SongsController < ApplicationController
            status: :ok
   end
 
-  def random
+  def random_song
     render json: Song.by_genre_name_eq(params[:genre_name]).take,
            serializer: SongSerializer,
            status: :ok
